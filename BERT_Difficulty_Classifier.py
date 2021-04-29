@@ -1,4 +1,4 @@
-from transformers import BertForSequenceClassification, BertTokenizerFast, Trainer, TrainingArguments
+from transformers import BertForSequenceClassification, BertTokenizerFast, Trainer, TrainingArguments, DistilBertForSequenceClassification, DistilBertTokenizerFast
 from nlp import load_dataset
 import torch
 import numpy as np
@@ -15,8 +15,8 @@ def tokenize(batch):
 train_dataset_tmp, test_dataset_tmp = load_dataset('json', data_files={'train':'quanta_train.json', 'test': 'quanta_test.json'}, field='questions', split = ['train', 'test'])
 train_dataset_tmp = train_dataset_tmp.shuffle(random.randint(0, 100))
 test_dataset_tmp = test_dataset_tmp.shuffle(random.randint(0, 100))
-train_dataset_tmp = train_dataset_tmp.map(lambda example: {'label': [True if example['difficulty'] == 'College' else False]})
-test_dataset_tmp = test_dataset_tmp.map(lambda example: {'label': [True if example['difficulty'] == 'College' else False]})
+train_dataset_tmp = train_dataset_tmp.map(lambda example: {'label': [0 if example['difficulty'] == 'School' else 1]})
+test_dataset_tmp = test_dataset_tmp.map(lambda example: {'label': [0 if example['difficulty'] == 'School' else 1]})
 train_dataset = train_dataset_tmp.map(tokenize, batched=True, batch_size=len(train_dataset_tmp) )
 test_dataset = test_dataset_tmp.map(tokenize, batched=True, batch_size=len(test_dataset_tmp))
 train_dataset.set_format('torch', columns=['input_ids', 'attention_mask', 'label'])
