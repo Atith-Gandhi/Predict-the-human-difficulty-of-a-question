@@ -1,9 +1,9 @@
 # Predict-the-human-difficulty-of-a-questions
 
-- The aim of this project was to create a classifier that can distinguish a high school question from a college question. 
-- Four different types of models based on(Bert, DistilBert, ConvBert, Electra) were trained and tested on quanta dataset.
+- The aim of this project was to create a classifier that can distinguish a high school question from a college level question. 
+- Four different types of models (Bert, DistilBert, ConvBert, Electra) were trained and tested on quanta dataset.
 (https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json). 
-- There are separate codes for training the classifier just on the basis of last line or the full question.
+- There are separate codes for training the classifier either on the basis of last line or the full question.
 
 ## Steps to run the code
 
