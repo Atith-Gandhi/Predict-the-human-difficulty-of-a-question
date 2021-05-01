@@ -38,10 +38,11 @@ Move the pre-trained models to the models/  folder.
 1. pip install -r requirements.txt
 
 - Create dataset (creates training and testing data for both last_line and full_question classifiers) 
-2. python3 create_dataset.py
+2. curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json --output quanta.json
+3. python3 create_dataset.py
 
-- Train the model ( if you have already downloaded pre-trained models skip step 3)
-3. python3 BERT/train_last_line.py or  python3 BERT/train_full_question.py
+- Train the model ( if you have already downloaded pre-trained models you can skip step 4)
+4. python3 BERT/train_last_line.py or  python3 BERT/train_full_question.py
 
 - Test the classifier
-4. python3 BERT/test_last_line.py or python3 BERT/test_full_question.py
+5. python3 BERT/test_last_line.py or python3 BERT/test_full_question.py
