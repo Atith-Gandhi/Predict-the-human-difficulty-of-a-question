@@ -1,6 +1,6 @@
 # Predict-the-human-difficulty-of-a-question
 
-- The aim of this project was to create a binary classifier that can distinguish a high school question from a college level question. 
+- The aim of this project is to create a binary classifier that can distinguish a high school question from a college level question. 
 - Four different types of models (Bert, DistilBert, ConvBert, Electra) were trained and tested on quanta dataset.
 (https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json). 
 - Questions that were having difficulty in ['College', 'easy_college', 'regular_college', 'hard_college'] were considered of College class difficulty level while the questions that were having difficulty in ['HS', 'hard_high_school', 'easy_high_school', 'regular_high_school', 'national_high_school'] were considered of High School level difficulty.
