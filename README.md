@@ -17,13 +17,13 @@
 | DistilBERT | 61.4% |
 | ELECTRA | 66.75 |
 
-### When full question is considered for classification
+### When the full question is considered for classification
 
 | Classifier | Accuracy|
 | --------------------------- | --------------------------- |
 | BERT | 82.6% |
 | ConvBERT | 81.2% |
-| DistilBERT | 81.95% |
+| DistilBERT | 79.95% |
 | ELECTRA | 80.05% |
 
 ## Pretrained models
