@@ -1,8 +1,11 @@
-from transformers import ConvBertForSequenceClassification, Trainer, TrainingArguments
+from transformers import ConvBertForSequenceClassification, ConvBertTokenizerFast, Trainer, TrainingArguments
 from nlp import load_dataset
 import torch
 import numpy as np
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+
+model = ConvBertForSequenceClassification.from_pretrained('models/ConvBERT_last_line')
+tokenizer = ConvBertTokenizerFast.from_pretrained('YituTech/conv-bert-base')
 
 def tokenize(batch):
     return tokenizer(batch['text'], truncation=True, max_length = 128, add_special_tokens=True, padding='max_length', return_attention_mask=True)
@@ -12,7 +15,7 @@ test_dataset = test_dataset.map(lambda example: {'label': [0 if example['difficu
 test_dataset = test_dataset.map(tokenize, batched=True, batch_size=len(test_dataset))
 test_dataset.set_format('torch', columns=['input_ids', 'attention_mask', 'label'])
 
-model = ConvBertForSequenceClassification.from_pretrained('models/ConvBERT_last_line')
+
 
 def compute_metrics(pred):
     labels = pred.label_ids
