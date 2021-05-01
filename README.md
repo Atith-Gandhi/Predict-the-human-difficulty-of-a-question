@@ -29,7 +29,8 @@
 ## Pretrained models
 
 Download pre-trained models from [here](https://drive.google.com/drive/folders/18dGwaxI7kx4Yx7gTMTiCbUv2YLxzNPmZ?usp=sharing)
-Move the pre-trained the models/ folder.
+
+Move the pre-trained models to the models/  folder.
 
 ## Steps to run the code
 
