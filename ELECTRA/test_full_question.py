@@ -36,4 +36,4 @@ trainer = Trainer(
     eval_dataset=test_dataset
 )
 
-trainer.evaluate()
+print(trainer.evaluate())
