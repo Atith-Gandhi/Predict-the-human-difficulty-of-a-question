@@ -22,7 +22,7 @@
 | Classifier | Accuracy|
 | --------------------------- | --------------------------- |
 | BERT | 82.6% |
-| ConvBERT | 68.1% |
+| ConvBERT | 81.2% |
 | DistilBERT | 61.4% |
 | ELECTRA | 66.75 |
 
