@@ -9,7 +9,7 @@ college = ['College', 'easy_college', 'regular_college', 'hard_college']
 school = ['HS', 'hard_high_school', 'easy_high_school', 'regular_high_school', 'national_high_school']
 
 # os.system('curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json --output quanta.json')
-f = open('quanta.json')
+f = open('quanta.train.json')
 data = json.load(f)
 random.shuffle(data['questions'])
 
