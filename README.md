@@ -1,4 +1,4 @@
-# Predict-the-human-difficulty-of-a-questions
+# Predict-the-human-difficulty-of-a-question
 
 - The aim of this project was to create a binary classifier that can distinguish a high school question from a college level question. 
 - Four different types of models (Bert, DistilBert, ConvBert, Electra) were trained and tested on quanta dataset.
