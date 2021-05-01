@@ -11,7 +11,7 @@
 ### When only last line is considered for classification
 
 | Classifier | Accuracy|
-| -------------------- | -------------------- |
+| --------------------------- | --------------------------- |
 | BERT | 67.45% |
 | ConvBERT | 68.1% |
 | DistilBERT | 61.4% |
@@ -20,7 +20,7 @@
 ### When full question is considered for classification
 
 | Classifier | Accuracy|
-| -------------------- | -------------------- |
+| --------------------------- | --------------------------- |
 | BERT | 67.45% |
 | ConvBERT | 68.1% |
 | DistilBERT | 61.4% |
