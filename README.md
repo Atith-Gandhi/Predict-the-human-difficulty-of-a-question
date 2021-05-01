@@ -36,7 +36,7 @@ Move the pre-trained the models/ folder.
 - Download the requirements
 1. pip install -r requirements.txt
 
-- Create dataset
+- Create dataset (creates training and testing data for both last_line and full_question classifiers) 
 2. python3 create_dataset.py
 
 - Train the model ( if you have already downloaded pre-trained models skip step 3)
