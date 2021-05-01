@@ -3,6 +3,9 @@ from nlp import load_dataset
 import torch
 import numpy as np
 
+model = DistilBertForSequenceClassification.from_pretrained('models/DistilBERT_full_question')
+tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased')
+
 def tokenize(batch):
     return tokenizer(batch['text'], truncation=True, max_length = 256, add_special_tokens=True, padding='max_length', return_attention_mask=True)
 
@@ -11,7 +14,6 @@ test_dataset = test_dataset.map(lambda example: {'label': [0 if example['difficu
 test_dataset = test_dataset.map(tokenize, batched=True, batch_size=len(test_dataset))
 test_dataset.set_format('torch', columns=['input_ids', 'attention_mask', 'label'])
 
-model = DistilBertForSequenceClassification.from_pretrained('models/DistilBERT_full_question')
 
 def compute_metrics(pred):
     labels = pred.label_ids
