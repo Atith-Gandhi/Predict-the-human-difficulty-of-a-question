@@ -24,7 +24,7 @@
 | BERT | 82.6% |
 | ConvBERT | 81.2% |
 | DistilBERT | 81.95% |
-| ELECTRA | 66.75 |
+| ELECTRA | 80.05% |
 
 ## Pretrained models
 
