@@ -1,7 +1,10 @@
-from transformers import ElectraForSequenceClassification, DistilBertTokenizerFast, Trainer, TrainingArguments
+from transformers import ElectraForSequenceClassification, ElectraTokenizerFast, Trainer, TrainingArguments
 from nlp import load_dataset
 import torch
 import numpy as np
+
+model = ElectraForSequenceClassification.from_pretrained('models/ELECTRA_full_question')
+tokenizer = ElectraTokenizerFast.from_pretrained('google/electra-small-discriminator')
 
 def tokenize(batch):
     return tokenizer(batch['text'], truncation=True, max_length = 256, add_special_tokens=True, padding='max_length', return_attention_mask=True)
@@ -11,7 +14,7 @@ test_dataset = test_dataset.map(lambda example: {'label': [0 if example['difficu
 test_dataset = test_dataset.map(tokenize, batched=True, batch_size=len(test_dataset))
 test_dataset.set_format('torch', columns=['input_ids', 'attention_mask', 'label'])
 
-model = ElectraForSequenceClassification.from_pretrained('models/ELECTRA_full_question')
+
 
 def compute_metrics(pred):
     labels = pred.label_ids
