@@ -37,15 +37,15 @@ Move the pre-trained models to the models/  folder.
 ## Steps to run the code
 
 - Download the requirements
-1. **pip install -r requirements.txt**
+1. **pip install -r requirements.txt
 
 - Create dataset (creates training and testing data for both last_line and full_question classifiers) 
-2. **curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json > quanta.json**
+2. **curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json > quanta.json
 
-3. **python3 create_dataset.py**
+3. **python3 create_dataset.py
 
 - Train the model. In the below command BERT can be replaced with other models (DistilBERT/ConvBERT/ELECTRA). ( if you have already downloaded pre-trained models you can skip step 4)
-4. **python3 BERT/train_last_line.py ** or ** python3 BERT/train_full_question.py**
+4. **python3 BERT/train_last_line.py or ** python3 BERT/train_full_question.py
 
 - Test the classifier
-5. **python3 BERT/test_last_line.py or python3 BERT/test_full_question.py**
+5. **python3 BERT/test_last_line.py or **python3 BERT/test_full_question.py
