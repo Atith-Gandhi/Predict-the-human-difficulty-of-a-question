@@ -39,6 +39,7 @@ Move the pre-trained models to the models/  folder.
 
 - Create dataset (creates training and testing data for both last_line and full_question classifiers) 
 2. curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json > quanta.json
+
 3. python3 create_dataset.py
 
 - Train the model. In the below command BERT can be replaced with other models like DistilBERT/ConvBERT/ELECTRA. ( if you have already downloaded pre-trained models you can skip step 4)
