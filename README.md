@@ -4,7 +4,9 @@
 - Four different types of models (Bert, DistilBert, ConvBert, Electra) were trained and tested on quanta dataset.
 (https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json). 
 - Questions that were having difficulty in ['College', 'easy_college', 'regular_college', 'hard_college'] were considered of College class difficulty level while the questions that were having difficulty in ['HS', 'hard_high_school', 'easy_high_school', 'regular_high_school', 'national_high_school'] were considered of High School level difficulty.
-- There are separate codes for training the classifier either on the basis of last line or the full question.
+- The repo contains separate codes for training and testing the classifiers for two different cases: 
+1. Classification on the basis of last line.
+2. Classification on the basis of full question.
 
 # Results
 
@@ -35,15 +37,15 @@ Move the pre-trained models to the models/  folder.
 ## Steps to run the code
 
 - Download the requirements
-1. pip install -r requirements.txt
+1. ** pip install -r requirements.txt **
 
 - Create dataset (creates training and testing data for both last_line and full_question classifiers) 
-2. curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json > quanta.json
+2. ** curl https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json > quanta.json **
 
-3. python3 create_dataset.py
+3. ** python3 create_dataset.py **
 
-- Train the model. In the below command BERT can be replaced with other models like DistilBERT/ConvBERT/ELECTRA. ( if you have already downloaded pre-trained models you can skip step 4)
-4. python3 BERT/train_last_line.py or  python3 BERT/train_full_question.py
+- Train the model. In the below command BERT can be replaced with other models (DistilBERT/ConvBERT/ELECTRA). ( if you have already downloaded pre-trained models you can skip step 4)
+4. ** python3 BERT/train_last_line.py ** or ** python3 BERT/train_full_question.py **
 
 - Test the classifier
-5. python3 BERT/test_last_line.py or python3 BERT/test_full_question.py
+5. ** python3 BERT/test_last_line.py or python3 BERT/test_full_question.py **
