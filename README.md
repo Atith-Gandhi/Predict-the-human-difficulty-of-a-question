@@ -45,7 +45,7 @@ Move the pre-trained models to the models/  folder.
 3. **python3 create_dataset.py**
 
 - Train the model. In the below command BERT can be replaced with other models (DistilBERT/ConvBERT/ELECTRA). ( if you have already downloaded pre-trained models you can skip step 4)
-4. **python3 BERT/train_last_line.py** or **python3 BERT/train_full_question.py**
+4. **python3 BERT/train_last_line.py**  or  **python3 BERT/train_full_question.py**
 
 - Test the classifier
-5. **python3 BERT/test_last_line.py** or **python3 BERT/test_full_question.py**
+5. **python3 BERT/test_last_line.py**  or  **python3 BERT/test_full_question.py**
